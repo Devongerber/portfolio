@@ -50,6 +50,10 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg-coworking4.jpg";
 
+// Firebase write
+import { collection, addDoc } from "firebase/firestore";
+import {db} from '../../../firebase';
+
 const initialList = [
   {
     id: 'a',
@@ -70,10 +74,10 @@ function handleChange(event) {
 
 function handleAdd() {
   const newList = list.concat({ email, id: uuidv4() });
-
+  addDoc(collection(db, "Email_List"), {
+    "Emails": email,    
+    });
   setList(newList);
-
-  setName('');
   toggleSnackbar()
 }
   const typedJSRef = useRef(null);
