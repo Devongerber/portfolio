@@ -212,7 +212,7 @@ function Steps() {
             </SwiperSlide>
           ))}
           <MKBox
-            sx={{ display: { xs: 'none' } }}
+            sx={{ display: { xs: 'none', md: 'flex' } }}
             display="flex"
             position="absolute"
             bottom={{ xs: 0, lg: "10%" }}

@@ -188,7 +188,7 @@ useEffect(() => {
     </MKBox>
       <Card
         sx={{
-          p: 2,
+          p: { xs: 0, md: 2 },
           mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
