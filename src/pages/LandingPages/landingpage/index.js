@@ -57,7 +57,7 @@ const initialList = [
   },
 ];
 
-function Coworking() {
+function Landing() {
   const [list, setList] = useState(initialList);
   const [email, setName] = useState('');
 
@@ -189,7 +189,7 @@ useEffect(() => {
       <Card
         sx={{
           p: 2,
-          mx: { xs: 2, lg: 3 },
+          mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
@@ -240,4 +240,4 @@ useEffect(() => {
   );
 }
 
-export default LandingPage;
+export default Landing;

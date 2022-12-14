@@ -33,7 +33,7 @@ function Testimonials() {
         <Grid container item xs={10} sx={{ mx: "auto" }}>
           <MKBox variant="gradient" bgColor="dark" borderRadius="lg" width="100%" py={6}>
             <Grid container>
-              <Grid item xs={12} md={6} xl={4} sx={{ position: "relative", px: 6 }}>
+              <Grid item md={6} xl={4} sx={{ position: "relative", px: 6, display: { xs: 'none' } }}>
                 <MKBox
                   component="img"
                   src={image}

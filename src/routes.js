@@ -40,30 +40,11 @@ Coded by www.creative-tim.com
 import Icon from "@mui/material/Icon";
 
 // Pages
-import CoworkingPage from "layouts/pages/landing-pages/coworking";
-import Rental from "layouts/pages/landing-pages/rental";
 
 
 // Account
 
 // Sections
-import PageHeaders from "layouts/sections/page-sections/page-headers";
-import Features from "layouts/sections/page-sections/featuers";
-import PricingSection from "layouts/sections/page-sections/pricing";
-import FaqSection from "layouts/sections/page-sections/faq";
-import BlogPosts from "layouts/sections/page-sections/blog-posts";
-import Testimonials from "layouts/sections/page-sections/testimonials";
-import Teams from "layouts/sections/page-sections/teams";
-import Stats from "layouts/sections/page-sections/stats";
-import Cta from "layouts/sections/page-sections/cta";
-import Applications from "layouts/sections/page-sections/applications";
-import LogoAreas from "layouts/sections/page-sections/logo-areas";
-import Footers from "layouts/sections/page-sections/footers";
-import GeneralCards from "layouts/sections/page-sections/general-cards";
-import ContentSections from "layouts/sections/page-sections/content-sections";
-import Navbars from "layouts/sections/navigation/navbars";
-import NavTabs from "layouts/sections/navigation/nav-tabs";
-import Pagination from "layouts/sections/navigation/pagination";
 import BlogPost1 from "pages/Blogs/blog-post-1";
 import BlogPost2 from "pages/Blogs/blog-post-2";
 import BlogPost3 from "pages/Blogs/blog-post-3";
@@ -75,18 +56,6 @@ const routes = [
     icon: <Icon>dashboard</Icon>,
 //    columns: 1,
 //    rowsPerColumn: 2,
-    collapse: [
-      {
-            name: "coworking",
-            route: "/pages/landing-pages/coworking",
-            component: <CoworkingPage />,
-          },
-          {
-            name: "rental",
-            route: "/pages/landing-pages/rental",
-            component: <Rental />,
-          },
-        ],
       },
   {
     name: "Learn More",
@@ -97,11 +66,6 @@ const routes = [
         description: "See all 55 sections",
         dropdown: true,
         collapse: [
-          {
-            name: "page headers",
-            route: "/sections/page-sections/page-headers",
-            component: <PageHeaders />,
-          },
           {
             name: "blog article",
             route: "/pages/Blogs/blog-post-1",
@@ -116,93 +80,6 @@ const routes = [
             name: "blog article",
             route: "/pages/Blogs/blog-post-3",
             component: <BlogPost3 />,
-          },
-          {
-            name: "features",
-            route: "/sections/page-sections/features",
-            component: <Features />,
-          },
-          {
-            name: "pricing",
-            route: "/sections/page-sections/pricing",
-            component: <PricingSection />,
-          },
-          {
-            name: "faq",
-            route: "/sections/page-sections/faq",
-            component: <FaqSection />,
-          },
-          {
-            name: "blog posts",
-            route: "/sections/page-sections/blog-posts",
-            component: <BlogPosts />,
-          },
-          {
-            name: "testimonials",
-            route: "/sections/page-sections/testimonials",
-            component: <Testimonials />,
-          },
-          {
-            name: "teams",
-            route: "/sections/page-sections/teams",
-            component: <Teams />,
-          },
-          {
-            name: "stats",
-            route: "/sections/page-sections/stats",
-            component: <Stats />,
-          },
-          {
-            name: "call to actions",
-            route: "/sections/page-sections/cta",
-            component: <Cta />,
-          },
-          {
-            name: "applications",
-            route: "/sections/page-sections/applications",
-            component: <Applications />,
-          },
-          {
-            name: "logo areas",
-            route: "/sections/page-sections/logo-areas",
-            component: <LogoAreas />,
-          },
-          {
-            name: "footers",
-            route: "/sections/page-sections/footers",
-            component: <Footers />,
-          },
-          {
-            name: "general cards",
-            route: "/sections/page-sections/general-cards",
-            component: <GeneralCards />,
-          },
-          {
-            name: "content sections",
-            route: "/sections/page-sections/content-sections",
-            component: <ContentSections />,
-          },
-        ],
-      },
-      {
-        name: "navigation",
-        description: "See all 3 navigations",
-        dropdown: true,
-        collapse: [
-          {
-            name: "navbars",
-            route: "/sections/navigation/navbars",
-            component: <Navbars />,
-          },
-          {
-            name: "nav tabs",
-            route: "/sections/navigation/nav-tabs",
-            component: <NavTabs />,
-          },
-          {
-            name: "pagination",
-            route: "/sections/navigation/pagination",
-            component: <Pagination />,
           },
         ],
       },
