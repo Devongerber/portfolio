@@ -51,12 +51,16 @@ function OurEfforts() {
           >
             Our effort
           </MKTypography>
-          <MKTypography variant="h3" mb={3}>
-            The powerfull design system
-          </MKTypography>
           <MKTypography variant="body2">
-            The way to survive in modern society is to be an ascetic. It is to retreat from society.
-            There&apos;s too much society everywhere you go…The only solution is turn it off.
+          For example, let’s say you run a true crime podcast focusing on cold cases. You could create a new campaign using “cold case” AND “crime” as your keywords, choose Facebook and Twitter as your networks, select &gt;150 likes as the threshold and set 20 hits per day. From there, you can check in every day to see the most relevant hits (from our priority algorithm) come in and easily join the conversations in-app. We will then track each conversation you join and keep you updated on where it goes + whether the user converts.
+          < br/>
+          < br/>
+          After all this, head on over to our dashboard that allows you to view one-of-a-kind analytics that compare digital monitoring with business metrics (Google analytics, podcast platform, YouTube, etc.). Using this data, analyze and adjust campaigns based on growth patterns and continue refining until you find the sweet spot!
+          < br/>
+          < br/>
+
+          With the content creation market becoming more and more saturated, you need a way to break through and interact with potential real fans; after all, these are the people who will spend the most money on your brand.
+
           </MKTypography>
         </Grid>
       </Container>

@@ -25,39 +25,27 @@ import MKTypography from "components/MKTypography";
 function Features() {
   const data = [
     {
-      icon: "credit_card",
-      name: "Modular Components",
+      icon: "question_answer_sharp_icon",
+      name: "Giving a way to find relevant conversations in a sea full of social media noise",
     },
     {
-      icon: "history_edu",
-      name: "Great Features",
+      icon: "add_business_sharp_icon",
+      name: "Allowing easy interactions that can boost business and find real fans",
     },
     {
-      icon: "developer_mode",
-      name: "Modern Frameworks",
-    },
-    {
-      icon: "history",
-      name: "24/7 Support",
-    },
-    {
-      icon: "support",
-      name: "Awesome Support",
-    },
-    {
-      icon: "contacts",
-      name: "Modern Interface",
+      icon: "analytics_sharp_icon",
+      name: "Integrated analytics from your choice of content creation platform and our digital monitoring",
     },
   ];
 
   return (
-    <MKBox component="section" py={8}>
+    <MKBox component="section" py={0}>
       <Container>
         <Grid container item xs={12} md={9} mx="auto">
           {data.map(({ icon, name }) => (
             <Grid key={name} item xs={12} md={4} my={2}>
               <MKBox p={2} textAlign="center" borderRadius="lg">
-                <MKTypography variant="h3" color="info" mb={2} textGradient>
+                <MKTypography variant="h1" color="primary" mb={2} textGradient>
                   <Icon>{icon}</Icon>
                 </MKTypography>
                 <MKTypography variant="h6">{name}</MKTypography>

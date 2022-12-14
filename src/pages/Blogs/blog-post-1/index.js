@@ -34,8 +34,6 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 // About Us page sections
 import Information from "pages/Blogs/blog-post-1/sections/Information";
 import OurEfforts from "pages/Blogs/blog-post-1//sections/OurEfforts";
-import Features from "pages/Blogs/blog-post-1//sections/Features";
-import Posts from "pages/Blogs/blog-post-1//sections/Posts";
 import Support from "pages/Blogs/blog-post-1//sections/Support";
 
 // Routes
@@ -142,8 +140,6 @@ function BlogPost1() {
       >
         <Information />
         <OurEfforts />
-        <Features />
-        <Posts />
         <Support />
       </Card>
       <MKBox pt={6} px={1} mt={6}>

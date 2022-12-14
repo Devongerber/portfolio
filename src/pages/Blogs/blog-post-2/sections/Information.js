@@ -36,7 +36,7 @@ function Information() {
             Nalapod
           </MKTypography>
           <MKTypography variant="h3" mb={3}>
-            How can you use Nalapod to expand your business and partnerships
+          How You Can Use Nalapod To Expand Your Business and Partnerships
           </MKTypography>
           <MKTypography variant="body2">
             Because most content creators gain growth through social media spread, we decided to build

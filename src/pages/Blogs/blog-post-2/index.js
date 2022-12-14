@@ -35,7 +35,6 @@ import DefaultFooter from "examples/Footers/DefaultFooter";
 import Information from "pages/Blogs/blog-post-2/sections/Information";
 import OurEfforts from "pages/Blogs/blog-post-2/sections/OurEfforts";
 import Features from "pages/Blogs/blog-post-2/sections/Features";
-import Posts from "pages/Blogs/blog-post-2/sections/Posts";
 import Support from "pages/Blogs/blog-post-2/sections/Support";
 
 // Routes
@@ -109,7 +108,7 @@ function BlogPost2() {
               mr={{ xs: 0, sm: 6 }}
               pr={{ xs: 0, sm: 6 }}
             >
-              This is the time to use these platforms to benefit your business.
+            This is the time to use these platforms to benefit your business.
             </MKTypography>
             <MKTypography variant="h5" color="white" mt={2} mb={1}>
               Connect with us on
@@ -141,9 +140,8 @@ function BlogPost2() {
         }}
       >
         <Information />
-        <OurEfforts />
         <Features />
-        <Posts />
+        <OurEfforts />
         <Support />
       </Card>
       <MKBox pt={6} px={1} mt={6}>
