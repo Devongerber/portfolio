@@ -30,7 +30,7 @@ function AboutUsOption({ icon, content }) {
         width="3rem"
         height="3rem"
         variant="gradient"
-        bgColor="info"
+        bgColor="primary"
         color="white"
         coloredShadow="info"
         display="flex"

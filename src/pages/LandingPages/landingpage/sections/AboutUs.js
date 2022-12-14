@@ -43,7 +43,7 @@ function AboutUs() {
               component="a"
               href="#steps"
               variant="button"
-              color="info"
+              color="primary"
               fontWeight="regular"
               sx={{
                 width: "max-content",
