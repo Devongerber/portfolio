@@ -25,8 +25,47 @@ import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
 
 import bgImage1 from 'assets/images/hits-page.png';
+import { v4 as uuidv4 } from 'uuid';
+import { useState } from "react";
+import { Link } from 'react-router-dom';
+
+// Firebase write
+import { collection, addDoc } from "firebase/firestore";
+import {db} from '../../../../firebase';
+
+
 
 function Contact() {
+  const initialList = [
+    {
+      id: 'a',
+      email: 'devrgerber@gmail.com',
+    },
+  ];
+
+  const [list, setList] = useState(initialList);
+  const [email, setName] = useState('');
+  const [comment, setComment] = useState('');
+  const [show, setShow] = useState(false);
+  const toggleSnackbar = () => setShow(!show);
+
+  function handleChangeEmail(event) {
+    setName(event.target.value);
+  }
+  function handleChangeComment(event) {
+    setComment(event.target.value);
+  }
+
+  function handleAddComment() {
+    const newList = list.concat({ email, id: uuidv4() });
+    addDoc(collection(db, "Email_List_Comments"), {
+      "Emails": email,
+      "Comment": comment, 
+      });
+    setList(newList);
+    toggleSnackbar()
+  }
+
   return (
     <MKBox
       component="section"
@@ -86,6 +125,8 @@ function Contact() {
                         type="email"
                         placeholder="eg. devon.gerber@nalapod.com"
                         label="Email Address"
+                        value = {email}
+                        onChange ={handleChangeEmail}
                         InputLabelProps={{ shrink: true }}
                         fullWidth
                       />
@@ -94,6 +135,8 @@ function Contact() {
                       <MKInput
                         variant="standard"
                         label="Your Message (tell us what you really want!!)"
+                        value = {comment}
+                        onChange ={handleChangeComment}
                         rows={4}
                         InputLabelProps={{ shrink: true }}
                         multiline
@@ -120,7 +163,7 @@ function Contact() {
                       </MKTypography>
                     </Grid>
                     <Grid item xs={12}>
-                      <MKButton type="submit" variant="gradient" color="dark" fullWidth>
+                      <MKButton type="submit" variant="gradient" color="dark" onClick={handleAddComment} component={Link} to="/landing-page"fullWidth>
                         Join Now
                       </MKButton>
                     </Grid>
