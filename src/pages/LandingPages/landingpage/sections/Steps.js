@@ -122,9 +122,9 @@ function Steps() {
   return (
     <MKBox component="section" py={0} position="relative" id="steps">
       <Container>
-      <Grid container mt={16}>
+      <Grid container mt={0}>
         {steps.map(({ number, label }, index) => (
-          <Grid key={label} item xs={12} lg={3} textAlign="center">
+          <Grid key={label} item xs={12} lg={3} sx={{textAlign: { xs:"left", md: "center"} }}>
             <MKTypography
               variant="body1"
               color="primary"
@@ -167,7 +167,7 @@ function Steps() {
             <SwiperSlide key={label}>
               <Grid container spacing={3} alignItems="center" sx={{ mb: { xs: 12, md: 0 } }}>
                 <Grid item xs={12} md={5} ml={{ xs: 0, lg: "auto" }}>
-                  <MKBox sx={{ p: { xs: 0, md: 2 } }} mx="auto">
+                  <MKBox sx={{ p: { xs: 0, md: 2 } }} mx="auto" textAlign="center">
                     <MKBox
                       component="img"
                       src={image}
@@ -175,7 +175,8 @@ function Steps() {
                       // width="100%"
                       borderRadius="xl"
                       shadow="lg"
-                      maxHeight="37.5rem"
+                      sx={{ maxHeight: {xs: "20rem", md: "37.5rem"} }}
+
                     />
                   </MKBox>
                 </Grid>

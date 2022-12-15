@@ -52,39 +52,26 @@ import BlogPost3 from "pages/Blogs/blog-post-3";
 
 const routes = [
   {
-    name: "Product",
+    name: "Blog",
     icon: <Icon>dashboard</Icon>,
-//    columns: 1,
-//    rowsPerColumn: 2,
-      },
-  {
-    name: "Learn More",
-    icon: <Icon>view_day</Icon>,
     collapse: [
       {
-        name: "page sections",
-        description: "See all 55 sections",
-        dropdown: true,
-        collapse: [
-          {
-            name: "blog article",
-            route: "/pages/Blogs/blog-post-1",
-            component: <BlogPost1 />,
-          },
-          {
-            name: "blog article",
-            route: "/pages/Blogs/blog-post-2",
-            component: <BlogPost2 />,
-          },
-          {
-            name: "blog article",
-            route: "/pages/Blogs/blog-post-3",
-            component: <BlogPost3 />,
-          },
-        ],
+        name: "blog article",
+        route: "/pages/Blogs/blog-post-1",
+        component: <BlogPost1 />,
       },
-    ],
-  },
+      {
+        name: "blog article",
+        route: "/pages/Blogs/blog-post-2",
+        component: <BlogPost2 />,
+      },
+      {
+        name: "blog article",
+        route: "/pages/Blogs/blog-post-3",
+        component: <BlogPost3 />,
+      },
+    ]
+      },
 ];
 
 export default routes;
