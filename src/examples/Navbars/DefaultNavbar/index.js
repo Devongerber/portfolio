@@ -13,6 +13,7 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+/* eslint react/forbid-prop-types: 0 */
 
 import { Fragment, useState, useEffect } from "react";
 

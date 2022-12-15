@@ -12,6 +12,7 @@ Coded by www.creative-tim.com
 
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
+/* eslint react/jsx-no-bind: 0 */
 
 import { useState, useEffect, useRef } from "react";
 import { v4 as uuidv4 } from 'uuid';
@@ -75,7 +76,7 @@ function handleChange(event) {
 function handleAdd() {
   const newList = list.concat({ email, id: uuidv4() });
   addDoc(collection(db, "Email_List"), {
-    "Emails": email,    
+    "Emails": email,
     });
   setList(newList);
   toggleSnackbar()
@@ -114,7 +115,7 @@ useEffect(() => {
         sx={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
-          backgroundPosition: "center",
+          backgroundPosition: {xs: "right", md: "center"},
         }}
       >
         <Container>
