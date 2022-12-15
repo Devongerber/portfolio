@@ -72,7 +72,7 @@ function AboutUs() {
                 content={
                   <>
                     We pull in the highest priority hits from your
-                    <br />
+
                     keywords, allowing you to focus on business growth.
 
                   </>
@@ -83,7 +83,7 @@ function AboutUs() {
                 content={
                   <>
                     Users also have the ability to track brands and
-                    <br />
+
                     competitors - slipping into relevant conversations.
                   </>
                 }
@@ -93,7 +93,7 @@ function AboutUs() {
                 content={
                   <>
                     One-of-a-kind analytics - comparing digital monitoring
-                    <br />
+
                     against content creation for ultimate analysis.
                   </>
                 }

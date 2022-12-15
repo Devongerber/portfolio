@@ -28,6 +28,7 @@ function AboutUsOption({ icon, content }) {
     <MKBox display="flex" alignItems="center" p={2}>
       <MKBox
         width="3rem"
+        minWidth="3rem"
         height="3rem"
         variant="gradient"
         bgColor="primary"
