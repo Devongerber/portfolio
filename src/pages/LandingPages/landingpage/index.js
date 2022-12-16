@@ -79,6 +79,7 @@ function handleAdd() {
     "Emails": email,
     });
   setList(newList);
+  setName('');
   toggleSnackbar()
 }
   const typedJSRef = useRef(null);

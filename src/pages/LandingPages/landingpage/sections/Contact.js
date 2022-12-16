@@ -23,6 +23,8 @@ import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 import MKInput from "components/MKInput";
 import MKButton from "components/MKButton";
+import MKSnackbar from "components/MKSnackbar";
+
 
 import bgImage1 from 'assets/images/hits-page.png';
 import { v4 as uuidv4 } from 'uuid';
@@ -60,9 +62,11 @@ function Contact() {
     const newList = list.concat({ email, id: uuidv4() });
     addDoc(collection(db, "Email_List_Comments"), {
       "Emails": email,
-      "Comment": comment, 
+      "Comment": comment,
       });
     setList(newList);
+    setName('');
+    setComment('');
     toggleSnackbar()
   }
 
@@ -169,12 +173,22 @@ function Contact() {
                     </Grid>
                   </Grid>
                 </MKBox>
+                <MKSnackbar
+                anchorOrigin={{ vertical: "top", horizontal: "center" }}
+                color="dark"
+                icon="notifications"
+                title="Thanks For The Support"
+                content="Thank you for joining the Nalapod waitlist. We will keep you updated on our progress and of course notify you when it's ready for you!!"
+                open={show}
+                close={toggleSnackbar}
+              />
               </MKBox>
             </MKBox>
           </Grid>
         </Grid>
       </Container>
     </MKBox>
+
   );
 }
 
