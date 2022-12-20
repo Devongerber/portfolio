@@ -207,14 +207,14 @@ function Steps() {
           <Grid key={label} item xs={12} lg={3} textAlign="center" display={{xs: "none", md: "block"}}>
             <MKTypography
               variant="body1"
-              color="black"
-              fontWeight="bold"
+              color="dark"
+
               pl={2}
               textGradient
               sx={{ fontFamily: ({ typography: { h1 } }) => h1.fontFamily, cursor: "pointer" }}
               onClick={() => slideTo(index + 1)}
             >
-              <MKBox component="span">{number}</MKBox>
+              <MKBox component="span" fontWeight="bold">{number}</MKBox>
               <MKBox component="span" ml={1}>
                 {label}
               </MKBox>
