@@ -25,6 +25,7 @@ import CssBaseline from "@mui/material/CssBaseline";
 // Material Kit 2 PRO React themes
 import theme from "assets/theme";
 import Landing from "layouts/pages/LandingPages/landingpage";
+import Coworking from "layouts/pages/LandingPages/coworking";
 
 // Material Kit 2 PRO React routes
 import routes from "routes";
@@ -57,6 +58,7 @@ export default function App() {
       <Routes>
         {getRoutes(routes)}
         <Route path="/landing-page" element={<Landing />} />
+        <Route path="/deck" element={<Coworking />} />
         <Route path="*" element={<Navigate to="/landing-page" />} />
       </Routes>
     </ThemeProvider>

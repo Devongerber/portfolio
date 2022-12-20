@@ -70,8 +70,8 @@ const routes = [
         route: "/pages/Blogs/blog-post-3",
         component: <BlogPost3 />,
       },
-    ]
-      },
+    ],
+  },
 ];
 
 export default routes;
