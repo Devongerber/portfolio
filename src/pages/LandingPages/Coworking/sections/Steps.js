@@ -247,14 +247,14 @@ function Steps() {
             <SwiperSlide key={label}>
               <Grid container spacing={3} alignItems={{xs: "center", md: "left"}} sx={{ mb: { xs: 12, md: 0 } }}>
                 <Grid item xs={12} md={12} ml={{ xs: 0, lg: "auto" }}>
-                  <MKBox sx={{ p: { xs: 0, md: 2 } }} mx="auto" textAlign={{xs: "center", md: "left"}} >
+                  <MKBox sx={{ p: { xs: 2, md: 2 } }} mx="auto" textAlign={{xs: "center", md: "left"}} >
                     <MKBox
                       component="img"
                       src={image}
                       alt={title}
                       width={{xs: "100%", md: "auto"}}
                       borderRadius="xl"
-                      sx={{ boxShadow: 5, maxHeight: {xs: "20rem", md: "37.5rem"} }}
+                      sx={{ boxShadow: "7px 7px 7px white", maxHeight: {xs: "20rem", md: "37.5rem"} }}
 
                     />
                   </MKBox>
