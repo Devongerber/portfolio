@@ -102,9 +102,9 @@ useEffect(() => {
       <DefaultNavbar
         routes={routes}
         action={{
-          route: "#contact-cta",
+          route: "landing-page/#contact-cta",
           label: "Join Waitlist",
-          color: "info",
+          color: "primary",
         }}
 
       />
@@ -144,7 +144,7 @@ useEffect(() => {
               Our mission is to build for the <br /> <span ref={typedJSRef} />
             </MKTypography>
             <MKTypography variant="body1" color="white" mt={0} mb={6} px={{ xs: 0, lg: 0 }}>
-            Join the waitlist now for access to the beta
+            Join the waitlist now for access to the beta when released
             </MKTypography>
             <br />
             <Grid container spacing={2}>
@@ -219,13 +219,14 @@ useEffect(() => {
             p={6}
             sx={{
               backgroundImage:
-                "url(https://images.unsplash.com/photo-1490730141103-6cac27aaab94?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80)",
+                "url(https://images.unsplash.com/photo-1513346940221-6f673d962e97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)",
+                backgroundPosition: "bottom",
             }}
           >
             <Grid container spacing={3} alignItems="center">
               <Grid item xs={12} md={8} lg={5}>
                 <MKTypography variant="h5" color="white" fontWeight="bold">
-                  Join the content creator revolution. Let your business shine and grow like it has never before.
+                  Join the content creator revolution. Let your business shine like it never has before.
                 </MKTypography>
               </Grid>
               <Grid item xs={12} lg={6} sx={{ ml: "auto" }}>

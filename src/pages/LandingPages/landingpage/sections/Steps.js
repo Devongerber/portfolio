@@ -128,13 +128,13 @@ function Steps() {
             <MKTypography
               variant="body1"
               color="primary"
-              fontWeight="bold"
+
               pl={2}
               textGradient
               sx={{ fontFamily: ({ typography: { h1 } }) => h1.fontFamily, cursor: "pointer" }}
               onClick={() => slideTo(index + 1)}
             >
-              <MKBox component="span">{number}</MKBox>
+              <MKBox component="span" fontWeight="bold">{number}</MKBox>
               <MKBox component="span" ml={1}>
                 {label}
               </MKBox>

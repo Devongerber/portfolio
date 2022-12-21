@@ -88,7 +88,7 @@ function Testimonials() {
                 </MKTypography>
                 <MKTypography
                   component="a"
-                  href="#"
+                  href="#steps"
                   variant="button"
                   color="white"
                   fontWeight="regular"

@@ -514,7 +514,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
                 <MKButton
                   component="a"
                   href={action.route}
-                  target="_blank"
+
                   rel="noreferrer"
                   variant={
                     action.color === "white" || action.color === "default"
