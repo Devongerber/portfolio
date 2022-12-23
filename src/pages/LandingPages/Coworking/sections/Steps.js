@@ -33,11 +33,18 @@ import Grid from "@mui/material/Grid";
 import MKBox from "components/MKBox";
 import MKTypography from "components/MKTypography";
 
-import img1 from 'assets/images/Signup1.png'
-import img2 from 'assets/images/Signup2.png'
-import img3 from 'assets/images/Signup3.png'
-import img4 from 'assets/images/Signup4.png'
-
+import img1 from 'assets/images/page-1.jpg'
+import img2 from 'assets/images/page-2.jpg'
+import img3 from 'assets/images/page-3.jpg'
+import img4 from 'assets/images/page-4.jpg'
+import img5 from 'assets/images/page-5.jpg'
+import img6 from 'assets/images/page-6.jpg'
+import img7 from 'assets/images/page-7.jpg'
+import img8 from 'assets/images/page-8.jpg'
+import img9 from 'assets/images/page-9.jpg'
+import img10 from 'assets/images/page-10.jpg'
+import img11 from 'assets/images/page-11.jpg'
+import img12 from 'assets/images/page-12.jpg'
 
 function Steps() {
   // install SwiperJS modules
@@ -87,24 +94,96 @@ function Steps() {
       disclaimer: "*images just meant show general functionality, not actual UI",
 
     },
+    {
+      image:
+      img5,
+      label: "Fifth Step"
+    },
+    {
+      image:
+      img6,
+      label: "Sixth Step"
+    },
+    {
+      image:
+      img7,
+      label: "Seventh Step"
+    },
+    {
+      image:
+      img8,
+      label: "Eighth Step"
+    },
+    {
+      image:
+      img9,
+      label: "Ninth Step"
+    },
+    {
+      image:
+      img10,
+      label: "Tenth Step"
+    },
+    {
+      image:
+      img11,
+      label: "Eleventh Step"
+    },
+    {
+      image:
+      img12,
+      label: "Twelfth Step"
+    }
   ];
 
   const steps = [
     {
       number: "01",
-      label: "Connect Social Accounts",
+      label: "Cover",
     },
     {
       number: "02",
-      label: "Create Campaigns",
+      label: "Intro",
     },
     {
       number: "03",
-      label: "Monitor and Respond",
+      label: "Problem",
     },
     {
       number: "04",
-      label: "Analyze and Adjust",
+      label: "Value Prop",
+    },
+    {
+      number: "05",
+      label: "Differentiators",
+    },
+    {
+      number: "06",
+      label: "Business Model",
+    },
+    {
+      number: "07",
+      label: "Go-To-Market",
+    },
+    {
+      number: "08",
+      label: "Competitor Analysis",
+    },
+    {
+      number: "09",
+      label: "Team",
+    },
+    {
+      number: "10",
+      label: "Financials",
+    },
+    {
+      number: "11",
+      label: "Status",
+    },
+    {
+      number: "12",
+      label: "End",
     },
   ];
 
@@ -113,6 +192,7 @@ function Steps() {
     opacity: 0.5,
     cursor: "pointer",
     transition: "opacity 0.15s ease",
+    color: "white",
 
     "&:hover, &:focus": {
       opacity: 1,
@@ -120,21 +200,21 @@ function Steps() {
   };
 
   return (
-    <MKBox component="section" py={0} position="relative" id="steps">
+    <MKBox component="section" py={4} position="relative" id="steps">
       <Container>
-      <Grid container mt={16}>
+      <Grid container mt={{md: 8}}>
         {steps.map(({ number, label }, index) => (
-          <Grid key={label} item xs={6} lg={3} textAlign="center">
+          <Grid key={label} item xs={12} lg={3} textAlign="center" display={{xs: "none", md: "block"}}>
             <MKTypography
               variant="body1"
-              color="primary"
-              fontWeight="bold"
+              color="dark"
+
               pl={2}
               textGradient
               sx={{ fontFamily: ({ typography: { h1 } }) => h1.fontFamily, cursor: "pointer" }}
               onClick={() => slideTo(index + 1)}
             >
-              <MKBox component="span">{number}</MKBox>
+              <MKBox component="span" fontWeight="bold">{number}</MKBox>
               <MKBox component="span" ml={1}>
                 {label}
               </MKBox>
@@ -156,79 +236,51 @@ function Steps() {
             navigation.init();
             navigation.update();
           }}
-          autoplay={{ delay: 2000 }}
-          speed={700}
+          autoplay={{ delay: 4000 }}
+          speed={1500}
           spaceBetween={0}
           slidesPerView={1}
           allowTouchMove={false}
           loop
         >
-          {slides.map(({ image, label, title, description, disclaimer }) => (
+          {slides.map(({ image, label, title}) => (
             <SwiperSlide key={label}>
-              <Grid container spacing={3} alignItems="center" sx={{ mb: { xs: 6, md: 0 } }}>
-                <Grid item xs={12} md={5} ml={{ xs: 0, lg: "auto" }}>
-                  <MKBox p={2}>
+              <Grid container spacing={3} alignItems={{xs: "center", md: "left"}} sx={{ mb: { xs: 12, md: 0 } }}>
+                <Grid item xs={12} md={12} ml={{ xs: 0, lg: "auto" }}>
+                  <MKBox sx={{ p: { xs: 2, md: 2 } }} mx="auto" textAlign={{xs: "center", md: "left"}} >
                     <MKBox
                       component="img"
                       src={image}
                       alt={title}
-                      // width="100%"
+                      width={{xs: "100%", md: "auto"}}
                       borderRadius="xl"
-                      shadow="lg"
-                      maxHeight="37.5rem"
+                      sx={{ boxShadow: "7px 7px 7px white", maxHeight: {xs: "20rem", md: "37.5rem"} }}
+
                     />
                   </MKBox>
-                </Grid>
-                <Grid item xs={12} md={5} mr={{ xs: 0, lg: "auto" }} position="relative">
-                  <MKTypography
-                    component="h6"
-                    variant="button"
-                    opacity={0.7}
-                    textTransform="uppercase"
-                    fontWeight="bold"
-                  >
-                    {label}
-                  </MKTypography>
-                  <MKTypography
-                    variant="h1"
-                    fontWeight="bold"
-                    sx={{
-                      fontSize: ({ typography: { d3, d4 } }) => ({
-                        xs: d4.fontSize,
-                        lg: d3.fontSize,
-                      }),
-                    }}
-                  >
-                    {title}
-                  </MKTypography>
-                  <MKTypography variant="body1" my={3}>
-                    {description}
-                  </MKTypography>
-                  <MKTypography variant="body2" my={3}>
-                    {disclaimer}
-                  </MKTypography>
                 </Grid>
               </Grid>
             </SwiperSlide>
           ))}
           <MKBox
+            sx={{ display: { xs: 'none', md: 'flex' } }}
             display="flex"
             position="absolute"
-            bottom={{ xs: 0, lg: "10%" }}
+            bottom={{ xs: 0, lg: "30%" }}
             right="5%"
             zIndex={2}
           >
             <MKTypography
               variant="h2"
               ref={navigationPrevRef}
-              color="dark"
+
               mr={{ xs: 8, md: 2, lg: 8 }}
               sx={navigationStyles}
             >
-              <MKBox className="fas fa-chevron-left" />
+              <MKBox className="fas fa-chevron-left" color="white"/>
             </MKTypography>
-            <MKTypography variant="h2" ref={navigationNextRef} color="dark" sx={navigationStyles}>
-              <MKBox className="fas fa-chevron-right" />
+            <MKTypography variant="h2" ref={navigationNextRef} sx={navigationStyles}>
+              <MKBox className="fas fa-chevron-right" color="white"/>
             </MKTypography>
           </MKBox>
         </Swiper>
