@@ -473,6 +473,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
         })}
       >
         <MKBox display="flex" justifyContent="space-between" alignItems="center">
+        <Link to="/landing-page">
           <MKBox
             component="img"
             to="/"
@@ -484,7 +485,9 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
             }}
             src={logo1}
             alt="logo"
+
           />
+          </Link>
 
           <MKBox
             color="inherit"

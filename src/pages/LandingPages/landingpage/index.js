@@ -231,7 +231,7 @@ useEffect(() => {
               </Grid>
               <Grid item xs={12} lg={6} sx={{ ml: "auto" }}>
                 <MKBox width="12rem" ml="auto">
-                  <MKButton variant="gradient" color="warning" fullWidth sx={{ boxShadow: "none" }}>
+                  <MKButton variant="gradient" color="warning" href="#contact-cta" fullWidth sx={{ boxShadow: "none" }}>
                     start now
                   </MKButton>
                 </MKBox>
