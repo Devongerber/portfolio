@@ -32,9 +32,7 @@ function Support() {
             <MKTypography variant="h4" mb={0.5}>
               Thank you for your support!
             </MKTypography>
-            <MKTypography variant="body1" color="text">
-              Delivering the best products
-            </MKTypography>
+
           </Grid>
           <Grid item xs={12} lg={6}>
             <Stack
@@ -43,6 +41,10 @@ function Support() {
               flexWrap="wrap"
               justifyContent={{ xs: "flex-start", lg: "flex-end" }}
             >
+            <MKSocialButton color="instagram">
+              <i className="fab fa-instagram" />
+              &nbsp; instagram
+            </MKSocialButton>
               <MKSocialButton color="twitter">
                 <i className="fab fa-twitter" />
                 &nbsp; twitter
@@ -50,14 +52,6 @@ function Support() {
               <MKSocialButton color="facebook">
                 <i className="fab fa-facebook" />
                 &nbsp; facebook
-              </MKSocialButton>
-              <MKSocialButton color="tumblr">
-                <i className="fab fa-tumblr" />
-                &nbsp; tumblr
-              </MKSocialButton>
-              <MKSocialButton color="dribbble">
-                <i className="fab fa-dribbble" />
-                &nbsp; dribbble
               </MKSocialButton>
             </Stack>
           </Grid>

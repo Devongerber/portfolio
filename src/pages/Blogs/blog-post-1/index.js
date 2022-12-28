@@ -62,9 +62,9 @@ function BlogPost1() {
           routes={routes}
           action={{
             type: "external",
-            route: "https://www.creative-tim.com/product/material-kit-pro-react",
-            label: "buy now",
-            color: "success",
+            route: "landing-page",
+            label: "Join Waitlist",
+            color: "primary",
           }}
           transparent
           relative
@@ -122,9 +122,6 @@ function BlogPost1() {
               <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
                 <i className="fab fa-twitter" />
               </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#">
-                <i className="fab fa-google-plus" />
-              </MKTypography>
             </MKBox>
           </Grid>
         </Container>
@@ -139,7 +136,7 @@ function BlogPost1() {
         }}
       >
         <Information />
-        <OurEfforts />
+
         <Support />
       </Card>
       <MKBox pt={6} px={1} mt={6}>

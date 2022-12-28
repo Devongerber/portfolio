@@ -8,7 +8,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import MKTypography from "components/MKTypography";
 
 // Images
-import logoCT from "assets/images/logo-4.svg";
+import logoCT from "assets/images/logo-3.png";
 
 const date = new Date().getFullYear();
 
@@ -16,7 +16,7 @@ export default {
   brand: {
     name: "Nalapod",
     image: logoCT,
-    route: "/",
+    route: "/landing-page",
   },
   socials: [
     {

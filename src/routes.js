@@ -47,7 +47,6 @@ import Icon from "@mui/material/Icon";
 // Sections
 import BlogPost1 from "pages/Blogs/blog-post-1";
 import BlogPost2 from "pages/Blogs/blog-post-2";
-import BlogPost3 from "pages/Blogs/blog-post-3";
 
 
 const routes = [
@@ -56,19 +55,14 @@ const routes = [
     icon: <Icon>dashboard</Icon>,
     collapse: [
       {
-        name: "blog article",
+        name: "The Content Creator Market",
         route: "/pages/Blogs/blog-post-1",
         component: <BlogPost1 />,
       },
       {
-        name: "blog article",
+        name: "Using Social Media to Expand Your Business",
         route: "/pages/Blogs/blog-post-2",
         component: <BlogPost2 />,
-      },
-      {
-        name: "blog article",
-        route: "/pages/Blogs/blog-post-3",
-        component: <BlogPost3 />,
       },
     ],
   },
