@@ -59,15 +59,21 @@ function Contact() {
   }
 
   function handleAddComment() {
-    const newList = list.concat({ email, id: uuidv4() });
-    addDoc(collection(db, "Email_List_Comments"), {
-      "Emails": email,
-      "Comment": comment,
-      });
-    setList(newList);
-    setName('');
-    setComment('');
-    toggleSnackbar()
+    if (!email || !email.includes("@")) {
+      console.log("Empty Sring")
+    }
+    
+    else {
+      const newList = list.concat({ email, id: uuidv4() });
+      addDoc(collection(db, "Email_List_Comments"), {
+        "Emails": email,
+        "Comment": comment,
+        });
+      setList(newList);
+      setName('');
+      setComment('');
+      toggleSnackbar()
+    }
   }
 
   return (

@@ -74,13 +74,19 @@ function handleChange(event) {
 }
 
 function handleAdd() {
-  const newList = list.concat({ email, id: uuidv4() });
-  addDoc(collection(db, "Email_List"), {
-    "Emails": email,
-    });
-  setList(newList);
-  setName('');
-  toggleSnackbar()
+  if (!email || !email.includes("@")) {
+    console.log("Empty Sring")
+  }
+
+  else {
+    const newList = list.concat({ email, id: uuidv4() });
+    addDoc(collection(db, "Email_List"), {
+      "Emails": email,
+      });
+    setList(newList);
+    setName('');
+    toggleSnackbar()
+  }
 }
   const typedJSRef = useRef(null);
 
