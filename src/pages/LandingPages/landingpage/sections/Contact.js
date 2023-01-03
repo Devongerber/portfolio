@@ -49,7 +49,15 @@ function Contact() {
   const [email, setName] = useState('');
   const [comment, setComment] = useState('');
   const [show, setShow] = useState(false);
+  const [showing, setShowing] = useState(false);
+  const [showing1, setShowing1] = useState(false);
+  const [toggled, setToggled] = useState(true);
+  const toggleTerms = () => setToggled(!toggled)
   const toggleSnackbar = () => setShow(!show);
+  const toggleError = () => setShowing(!showing);
+  const toggleError1 = () => setShowing1(!showing1);
+
+
 
   function handleChangeEmail(event) {
     setName(event.target.value);
@@ -60,9 +68,12 @@ function Contact() {
 
   function handleAddComment() {
     if (!email || !email.includes("@")) {
-      console.log("Empty Sring")
+      toggleError()
     }
-    
+    else if (!toggled === true) {
+      toggleError1()
+    }
+
     else {
       const newList = list.concat({ email, id: uuidv4() });
       addDoc(collection(db, "Email_List_Comments"), {
@@ -87,6 +98,7 @@ function Contact() {
       mb={{ xs: 0, lg: -2 }}
       sx={{ overflow: { xs: "hidden", lg: "visible" }, placeItems: "center" }}
     >
+
       <MKBox
         component="img"
         alt="lake house"
@@ -103,6 +115,7 @@ function Contact() {
           borderTopLeftRadius: ({ borders: { borderRadius } }) => ({ xs: 0, lg: borderRadius.lg }),
         }}
       />
+
       <Container id="contact-cta">
         <Grid container spacing={{ xs: 0, lg: 3 }} sx={{ mt: { xs: 0, lg: 12 } }}>
           <Grid item xs={12} lg={7} justifyContent="center" flexDirection="column">
@@ -156,7 +169,7 @@ function Contact() {
                   </Grid>
                   <Grid container>
                     <Grid item xs={12} sx={{ mb: 3, ml: -1 }}>
-                      <Switch id="flexSwitchCheckDefault" defaultChecked />
+                      <Switch id="flexSwitchCheckDefault" defaultChecked onClick={toggleTerms} />
                       <MKTypography
                         component="label"
                         variant="button"
@@ -166,34 +179,60 @@ function Contact() {
                         sx={{ userSelect: "none", cursor: "pointer" }}
                       >
                         I agree to the{" "}
-                        <MKTypography component="a" href="#" variant="button" fontWeight="regular">
+                        <MKTypography component="a" href="https://www.termsandcondiitionssample.com/live.php?token=i4SGGb38qsY0BoTVkuqPl4BrlkqKF6Ro" variant="button" fontWeight="regular">
                           <u>Terms and Conditions</u>
                         </MKTypography>
                         .
                       </MKTypography>
                     </Grid>
                     <Grid item xs={12}>
-                      <MKButton type="submit" variant="gradient" color="dark" onClick={handleAddComment} component={Link} to="/landing-page"fullWidth>
+                      <MKButton type="submit" variant="gradient" color="dark" onClick={handleAddComment}  to="/landing-page"fullWidth>
                         Join Now
                       </MKButton>
                     </Grid>
                   </Grid>
                 </MKBox>
-                <MKSnackbar
-                anchorOrigin={{ vertical: "top", horizontal: "center" }}
-                color="dark"
-                icon="notifications"
-                title="Thanks For The Support"
-                content="Thank you for joining the Nalapod waitlist. We will keep you updated on our progress and of course notify you when it's ready for you!!"
-                open={show}
-                close={toggleSnackbar}
-              />
               </MKBox>
+              <MKSnackbar
+              anchorOrigin={{ vertical: "top", horizontal: "center" }}
+              color="dark"
+              autoHideDuration={4000}
+              icon="notifications"
+              title="Thanks For The Support"
+              content="Thank you for joining the Nalapod waitlist. We will keep you updated on our progress and of course notify you when it's ready for you!!"
+              open={show}
+              close={toggleSnackbar}
+              onClose={toggleSnackbar}
+            />
+            <MKSnackbar
+            anchorOrigin={{ vertical: "top", horizontal: "center" }}
+            color="error"
+            icon="error"
+            autoHideDuration={4000}
+            title="Incorrect Input"
+            content="Please fill in with a valid email address. Thank you!"
+            open={showing}
+            close={toggleError}
+            onClose={toggleError}
+          />
+          <MKSnackbar
+          anchorOrigin={{ vertical: "top", horizontal: "center" }}
+          color="error"
+          icon="error"
+          autoHideDuration={4000}
+          title="Terms and Conditions"
+          content="Please accept the terms and conditions before submitting. Thank you!"
+          open={showing1}
+          close={toggleError1}
+          onClose={toggleError1}
+        />
             </MKBox>
           </Grid>
         </Grid>
       </Container>
     </MKBox>
+
+
 
   );
 }

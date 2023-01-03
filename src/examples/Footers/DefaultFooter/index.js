@@ -35,11 +35,7 @@ function DefaultFooter({ content }) {
       <Container>
         <Grid container spacing={3}>
           <Grid item xs={12} md={10} sx={{ ml: "auto", mb: 3 }} display="flex">
-            <MKBox justifyContent="flex-end">
-              <Link to={brand.route}>
-                <MKBox component="img" src={brand.image} alt={brand.name} maxWidth="6rem" borderRadius="xl" mb={2} />
-              </Link>
-            </MKBox>
+            
             <MKBox  alignItems="center" mt={4} ml={8} >
               {socials.map(({ icon, link }, key) => (
                 <MKTypography

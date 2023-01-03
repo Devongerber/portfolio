@@ -26,7 +26,7 @@ const MKButton = forwardRef(
     <MKButtonRoot
       {...rest}
       ref={ref}
-      color="primary"
+      color="white"
       variant={variant === "gradient" ? "contained" : variant}
       size={size}
       ownerState={{ color, variant, size, circular, iconOnly }}

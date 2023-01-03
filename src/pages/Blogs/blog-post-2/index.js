@@ -114,15 +114,15 @@ function BlogPost2() {
               Connect with us on
             </MKTypography>
             <MKBox display="flex" alignItems="center">
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fab fa-facebook" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fab fa-instagram" />
-              </MKTypography>
-              <MKTypography component="a" variant="body1" color="white" href="#" mr={3}>
-                <i className="fab fa-twitter" />
-              </MKTypography>
+            <MKTypography component="a" variant="body1" color="white" href="https://www.facebook.com/nalapod/" mr={3}>
+              <i className="fab fa-facebook" />
+            </MKTypography>
+            <MKTypography component="a" variant="body1" color="white" href="https://www.instagram.com/nalapod_official/" mr={3}>
+              <i className="fab fa-instagram" />
+            </MKTypography>
+            <MKTypography component="a" variant="body1" color="white" href="https://www.twitter.com/nalapod/" mr={3}>
+              <i className="fab fa-twitter" />
+            </MKTypography>
             </MKBox>
           </Grid>
         </Container>

@@ -21,7 +21,7 @@ export default {
   socials: [
     {
       icon: <InstagramIcon />,
-      link: "https://www.instagram.com/nalapod/",
+      link: "https://www.instagram.com/nalapod_official/",
     },
     {
       icon: <TwitterIcon />,
@@ -66,9 +66,7 @@ export default {
    {
       name: "legal",
       items: [
-        { name: "terms & conditions", href: "https://www.creative-tim.com/terms" },
-        { name: "privacy policy", href: "https://www.creative-tim.com/privacy" },
-        { name: "licenses (EULA)", href: "https://www.creative-tim.com/license" },
+        { name: "terms & conditions", href: "https://www.termsandcondiitionssample.com/live.php?token=i4SGGb38qsY0BoTVkuqPl4BrlkqKF6Ro" },
       ],
     },
   ],
