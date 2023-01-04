@@ -88,7 +88,7 @@ function Information() {
                   />
                 </ListItem>,
             </List>
-            <br />
+            <br/>
             <br />
             <MKTypography>
             References:

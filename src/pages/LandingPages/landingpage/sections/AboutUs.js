@@ -37,7 +37,7 @@ function AboutUs() {
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={2}>
               Nalapod is all about the content creators, giving you a way to monitor brands (including your own),
-              use keywords to branch out and find the conversations, and then join them! All from our platform.
+              use keywords to branch out and find relevant conversations, and then join them! All from our platform.
             </MKTypography>
             <MKTypography
               component="a"
