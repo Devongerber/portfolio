@@ -41,15 +41,15 @@ function Support() {
               flexWrap="wrap"
               justifyContent={{ xs: "flex-start", lg: "flex-end" }}
             >
-            <MKSocialButton color="instagram">
+            <MKSocialButton color="instagram" href="https://www.instagram.com/nalapod_official/">
               <i className="fab fa-instagram" />
               &nbsp; instagram
             </MKSocialButton>
-              <MKSocialButton color="twitter">
+              <MKSocialButton color="twitter" href="https://www.twitter.com/nalapod/">
                 <i className="fab fa-twitter" />
                 &nbsp; twitter
               </MKSocialButton>
-              <MKSocialButton color="facebook">
+              <MKSocialButton color="facebook" href="https://www.facebook.com/nalapod/">
                 <i className="fab fa-facebook" />
                 &nbsp; facebook
               </MKSocialButton>

@@ -65,9 +65,14 @@ const initialList = [
 function Landing() {
   const [list, setList] = useState(initialList);
   const [email, setName] = useState('');
-
   const [show, setShow] = useState(false);
+  const [showing, setShowing] = useState(false);
+  const [showing1, setShowing1] = useState(false);
+  const [toggled, setToggled] = useState(true);
+  const toggleTerms = () => setToggled(!toggled)
   const toggleSnackbar = () => setShow(!show);
+  const toggleError = () => setShowing(!showing);
+  const toggleError1 = () => setShowing1(!showing1);
 
 function handleChange(event) {
   setName(event.target.value);
@@ -75,7 +80,10 @@ function handleChange(event) {
 
 function handleAdd() {
   if (!email || !email.includes("@")) {
-    console.log("Empty Sring")
+    toggleError()
+  }
+  else if (!toggled === true) {
+    toggleError1()
   }
 
   else {
@@ -163,7 +171,7 @@ useEffect(() => {
                   style : {color : 'white'} }} inputProps={{ style: { color: "white"} }} fullWidth />
               </Grid>
               <Grid item xs={12} sx={{ mb: 3, ml: -1 }}>
-                <Switch id="flexSwitchCheckDefault" defaultChecked />
+                <Switch id="flexSwitchCheckDefault" defaultChecked onClick={toggleTerms} />
                 <MKTypography
                   component="label"
                   variant="button"
@@ -173,9 +181,10 @@ useEffect(() => {
                   sx={{ userSelect: "none", cursor: "pointer" }}
                 >
                   I agree to the{" "}
-                  <MKTypography component="a" href="#" variant="button" fontWeight="regular" color="white">
+                  <MKTypography component="a" href="https://www.termsandcondiitionssample.com/live.php?token=i4SGGb38qsY0BoTVkuqPl4BrlkqKF6Ro" variant="button" fontWeight="regular" color="white">
                     <u>Terms and Conditions</u>
                   </MKTypography>
+
                   .
                 </MKTypography>
               </Grid>
@@ -189,12 +198,36 @@ useEffect(() => {
           <MKSnackbar
           anchorOrigin={{ vertical: "top", horizontal: "center" }}
           color="dark"
+          autoHideDuration={4000}
           icon="notifications"
           title="Thanks For The Support"
           content="Thank you for joining the Nalapod waitlist. We will keep you updated on our progress and of course notify you when it's ready for you!!"
           open={show}
           close={toggleSnackbar}
+          onClose={toggleSnackbar}
         />
+        <MKSnackbar
+        anchorOrigin={{ vertical: "top", horizontal: "center" }}
+        color="error"
+        icon="error"
+        autoHideDuration={4000}
+        title="Incorrect Input"
+        content="Please fill in with a valid email address. Thank you!"
+        open={showing}
+        close={toggleError}
+        onClose={toggleError}
+      />
+      <MKSnackbar
+      anchorOrigin={{ vertical: "top", horizontal: "center" }}
+      color="error"
+      icon="error"
+      autoHideDuration={4000}
+      title="Terms and Conditions"
+      content="Please accept the terms and conditions before submitting. Thank you!"
+      open={showing1}
+      close={toggleError1}
+      onClose={toggleError1}
+    />
         </Container>
       </MKBox>
     </MKBox>
