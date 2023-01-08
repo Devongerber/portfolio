@@ -116,7 +116,7 @@ useEffect(() => {
       <DefaultNavbar
         routes={routes}
         action={{
-          route: "landing-page/#contact-cta",
+          route: "landing-page#contact-cta",
           label: "Join Waitlist",
           color: "primary",
         }}
