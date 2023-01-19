@@ -1,9 +1,9 @@
 {
-  "short_name": "Material Kit",
-  "name": "Material Kit 2 PRO React",
+  "short_name": "Nalapod",
+  "name": "Nalapod",
   "icons": [
     {
-      "src": "favicon.png",
+      "src": "logo-3.png",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/png"
     }
