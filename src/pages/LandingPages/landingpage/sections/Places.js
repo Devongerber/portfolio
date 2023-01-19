@@ -69,7 +69,7 @@ function Places() {
             Explore the reasons you should be using Nalapod{" "}
           </MKTypography>
           <MKTypography variant="body2" color="text">
-            Some insights for ya. Read up on how you can be expanding your business by understanding where you fit in to the digital market and inserting yourself into brand relevant conversations.
+            Some insights for ya. Read up on how you can be expanding your business by understanding where you fit in the digital market and creating new interactions.
           </MKTypography>
         </Grid>
         <Grid container spacing={8} sx={{ mt: 3 }} justifyContent="center">
