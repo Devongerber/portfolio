@@ -68,6 +68,8 @@ function Testimonials() {
                 >
                   It&apos;s not the best content that wins. It&apos;s the best-promoted content that wins.
                 </MKTypography>
+                <Icon fontSize="large">format_quote</Icon>
+                <br />
                 <MKTypography variant="button" fontWeight="bold" color="white">
                   Andy Crestodina{" "}
 
@@ -84,7 +86,7 @@ function Testimonials() {
                   $104 Billion
                 </MKTypography>
                 <MKTypography component="p" variant="button" color="white" opacity={0.8} mb={2}>
-                  is the estimated worth of the global content creator economy
+                  Estimated worth of the global content creator economy
                 </MKTypography>
                 <MKTypography
                   component="a"

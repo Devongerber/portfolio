@@ -57,7 +57,7 @@ function Steps() {
         img1,
       label: "First Step",
       title: "Connect Social Accounts",
-      description: "Connect Twitter, Instagram, Facebook, Reddit and YouTube accounts to respond in-app to hits",
+      description: "Connect Twitter, Instagram, Facebook, Reddit and YouTube accounts to respond in-app to hits coming in from your campaigns",
       disclaimer: "*images just meant show general functionality, not actual UI",
     },
     {
@@ -65,7 +65,7 @@ function Steps() {
         img2,
       label: "Second Step",
       title: "Create Campaigns",
-      description: "Campaigns consist of a keyword or keywords, chosen networks, thresholds including minimum likes, and more",
+      description: "Creating a campaign consists of specifying keyword(s), networks, thresholds including minimum likes, and more",
       disclaimer: "*images just meant show general functionality, not actual UI",
 
     },
@@ -83,7 +83,7 @@ function Steps() {
         img4,
       label: "Fourth Step",
       title: "Analyze and Adjust",
-      description: "Use our analytics dashboard to determine how a campaign is affecting your business and which campaigns are worth focusing more on.",
+      description: "Use our analytics dashboard to determine how a campaign is affecting your business and which campaigns are worth focusing your time on.",
       disclaimer: "*images just meant show general functionality, not actual UI",
 
     },

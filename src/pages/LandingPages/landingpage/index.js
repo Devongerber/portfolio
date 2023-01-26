@@ -155,7 +155,9 @@ useEffect(() => {
                 },
               })}
             >
-              Our mission is to build for the <br /> <span ref={typedJSRef} />
+              Our mission is to help the <spa ref={typedJSRef} />
+              <br />
+              organically grow a following
             </MKTypography>
             <MKTypography variant="body1" color="white" mt={0} mb={6} px={{ xs: 0, lg: 0 }}>
             Join the waitlist now for access to the beta when released
@@ -165,7 +167,7 @@ useEffect(() => {
               <Grid item xs={6} sm={6} md={3}
               alignItems="left"
               textAlign="left"
-              mt={3}
+              mt={0}
               >
                 <MKInput variant="outlined" type = "email" label="Insert Email" value = {email} onChange ={handleChange} InputLabelProps={{
                   style : {color : 'white'} }} inputProps={{ style: { color: "white"} }} fullWidth />

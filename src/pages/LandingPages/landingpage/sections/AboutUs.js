@@ -36,7 +36,7 @@ function AboutUs() {
               What We Do
             </MKTypography>
             <MKTypography variant="body2" color="text" mb={2}>
-              Nalapod is all about the content creators - allowing them to use keywords in order to branch out, find relevant conversations, and then join them! All from inside our platform.
+              Nalapod users are content creators looking to build their brand using keywords to expand their influence by finding relevant conversations, joining them and tracking the conversions.
             </MKTypography>
             <MKTypography
               component="a"
@@ -81,7 +81,7 @@ function AboutUs() {
                 icon="forum"
                 content={
                   <>
-                    The ability to track brands and
+                    We give you the ability to track brands and
 
                     competitors + use this information for your business.
                   </>
@@ -91,7 +91,7 @@ function AboutUs() {
                 icon="analytics"
                 content={
                   <>
-                    One-of-a-kind analytics - comparing digital monitoring
+                    Finally, we provide one-of-a-kind analytics - comparing digital monitoring
 
                     against content creation for ultimate analysis.
                   </>

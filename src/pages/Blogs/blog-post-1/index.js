@@ -97,7 +97,7 @@ function BlogPost1() {
                 },
               })}
             >
-              Content Creator Market + Marketing
+              Content Creator Market
             </MKTypography>
             <MKTypography
               variant="body1"
@@ -107,7 +107,7 @@ function BlogPost1() {
               mr={{ xs: 0, sm: 6 }}
               pr={{ xs: 0, sm: 6 }}
             >
-              What the landscape looks like and how to move up in it.
+              What the landscape looks like.
             </MKTypography>
             <MKTypography variant="h5" color="white" mt={2} mb={1}>
               Connect with us on

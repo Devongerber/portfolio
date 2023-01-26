@@ -59,7 +59,7 @@ function OurEfforts() {
           < br/>
           < br/>
 
-          With the content creation market becoming more and more saturated, you need a way to break through and interact with potential real fans; after all, these are the people who will spend the most money on your brand.
+          With the content creation market becoming more saturated, you need a way to break through and interact with potential real fans; after all, these are the people who will spend the most money on your brand.
 
           </MKTypography>
         </Grid>

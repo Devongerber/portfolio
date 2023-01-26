@@ -48,7 +48,7 @@ function Information() {
                   </ListItemIcon>
                   <ListItemText
                     primary="There are over 200 million content creators in the world today."
-                    secondary="This number is growing everyday, with more and more opportunity and paths to monetization."
+                    secondary="This number is growing everyday, with more opportunity and paths to monetization."
                   />
                 </ListItem>,
                 <ListItem>
@@ -65,8 +65,8 @@ function Information() {
                     <Icon fontSize="xl">hub_rounded</Icon>
                   </ListItemIcon>
                   <ListItemText
-                    primary="Only 13% of content creators say making money is their top priority. 35% say connecting with audiences is."
-                    secondary="Content itself is nothing without an audience. Finding fans must be a as much or more of a priority while building your content out."
+                    primary="Only 13% of content creators say making money is their top priority, 35% say connecting with audiences is."
+                    secondary="Content itself is nothing without an audience. Finding fans is just as important as building content."
                   />
                 </ListItem>,
                 <ListItem>
@@ -75,7 +75,7 @@ function Information() {
                   </ListItemIcon>
                   <ListItemText
                     primary="77% of content creator respondents consider social media the top channel to reach their audience."
-                    secondary="Social media remains the most valuable space for content creators to find audiences - whether you are just starting out or a well established brand."
+                    secondary="Social media remains the most valuable space for content creators to find audiences; whether you are just starting out or a well-established brand."
                   />
                 </ListItem>,
                 <ListItem>

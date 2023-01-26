@@ -39,8 +39,8 @@ function Information() {
           How You Can Use Nalapod To Expand Your Business and Partnerships
           </MKTypography>
           <MKTypography variant="body2">
-            Because most content creators gain growth through social media spread, we decided to build
-            a platform that exponentially increases these opportunities by:
+            Because most content creators gain growth through social media spread, we are building
+            a platform that exponentially increases these opportunities to:
           </MKTypography>
         </Grid>
       </Container>

@@ -26,15 +26,15 @@ function Features() {
   const data = [
     {
       icon: "question_answer_sharp_icon",
-      name: "Giving a way to find relevant conversations in a sea full of social media noise",
+      name: "Enable creators to find relevant conversations in a sea full of social media noise",
     },
     {
       icon: "add_business_sharp_icon",
-      name: "Allowing easy interactions that can boost business and find real fans",
+      name: "Generate targeted and seamless interactions with potential high value fans",
     },
     {
       icon: "analytics_sharp_icon",
-      name: "Integrated analytics from your choice of content creation platform and our digital monitoring",
+      name: "Dig into analytics that measure how interactions are boosting your brand",
     },
   ];
 
