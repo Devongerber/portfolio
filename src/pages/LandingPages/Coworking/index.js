@@ -42,7 +42,6 @@ import Steps from "pages/LandingPages/Coworking/sections/Steps";
 
 
 // Routes
-import routes from "routes";
 import footerRoutes from "footer.routes";
 
 // Images

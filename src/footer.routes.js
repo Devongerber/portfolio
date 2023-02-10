@@ -3,6 +3,7 @@ import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import YouTubeIcon from "@mui/icons-material/YouTube";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 // Material Kit 2 PRO React components
 import MKTypography from "components/MKTypography";
@@ -20,20 +21,8 @@ export default {
   },
   socials: [
     {
-      icon: <InstagramIcon />,
-      link: "https://www.instagram.com/nalapod_official/",
-    },
-    {
-      icon: <TwitterIcon />,
-      link: "https://twitter.com/nalapod",
-    },
-    {
-      icon: <FacebookIcon />,
-      link: "https://www.facebook.com/nalapod/",
-    },
-    {
-      icon: <YouTubeIcon />,
-      link: "https://www.youtube.com/channel/UCVyTG4sCw-rOvB9oHkzZD1w",
+      icon: <LinkedInIcon />,
+      link: "https://www.linkedin.com/in/devon-gerber/",
     },
   ],
   menus: [
@@ -63,12 +52,7 @@ export default {
 //        { name: "sponsorships", href: "https://www.creative-tim.com/sponsorships" },
 //      ],
 //    },
-   {
-      name: "legal",
-      items: [
-        { name: "terms & conditions", href: "https://www.termsandcondiitionssample.com/live.php?token=i4SGGb38qsY0BoTVkuqPl4BrlkqKF6Ro" },
-      ],
-    },
+
   ],
   copyright: (
     <MKTypography variant="button" fontWeight="regular">
@@ -81,7 +65,7 @@ export default {
         variant="button"
         fontWeight="regular"
       >
-        Nalapod
+        Devon Gerber
       </MKTypography>
       .
     </MKTypography>

@@ -38,6 +38,9 @@ function AboutUs() {
             <MKTypography variant="body2" color="text" mb={2}>
               Nalapod users are content creators looking to build their brand using keywords to expand their influence by finding relevant conversations, joining them and tracking the conversions.
             </MKTypography>
+            <MKTypography variant="body2" color="text" mb={2}>
+            Only a tiny, tiny slice of creators gain a large following just from posting; the other 99% need to way to target and then interact with their audience in whatever niche they create in.
+            </MKTypography>
             <MKTypography
               component="a"
               href="#steps"

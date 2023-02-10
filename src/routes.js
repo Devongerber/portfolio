@@ -51,20 +51,7 @@ import BlogPost2 from "pages/Blogs/blog-post-2";
 
 const routes = [
   {
-    name: "Blog",
-    icon: <Icon>dashboard</Icon>,
-    collapse: [
-      {
-        name: "The Content Creator Market",
-        route: "/pages/Blogs/blog-post-1",
-        component: <BlogPost1 />,
-      },
-      {
-        name: "Using Social Media to Expand Your Business",
-        route: "/pages/Blogs/blog-post-2",
-        component: <BlogPost2 />,
-      },
-    ],
+
   },
 ];
 

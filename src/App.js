@@ -28,7 +28,6 @@ import Landing from "layouts/pages/LandingPages/landingpage";
 import Coworking from "layouts/pages/LandingPages/coworking";
 
 // Material Kit 2 PRO React routes
-import routes from "routes";
 
 export default function App() {
   const { pathname } = useLocation();
@@ -56,10 +55,9 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <Routes>
-        {getRoutes(routes)}
-        <Route path="/landing-page" element={<Landing />} />
-        <Route path="/deck" element={<Coworking />} />
-        <Route path="*" element={<Navigate to="/landing-page" />} />
+        
+        <Route path="/portfolio" element={<Landing />} />
+        <Route path="*" element={<Navigate to="/portfolio" />} />
       </Routes>
     </ThemeProvider>
   );

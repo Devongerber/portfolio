@@ -14,7 +14,7 @@ Coded by www.creative-tim.com
 */
 /* eslint react/jsx-no-bind: 0 */
 
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { v4 as uuidv4 } from 'uuid';
 
 import * as Typed from "typed.js";
@@ -41,7 +41,12 @@ import Testimonials from "pages/LandingPages/landingpage/sections/Testimonials";
 import AboutUs from "pages/LandingPages/landingpage/sections/AboutUs";
 import Places from "pages/LandingPages/landingpage/sections/Places";
 import Contact from "pages/LandingPages/landingpage/sections/Contact";
-import Steps from "pages/LandingPages/landingpage/sections/Steps";
+import Contact1 from "pages/LandingPages/landingpage/sections/Contact1";
+import ContactFirst from "pages/LandingPages/landingpage/sections/ContactFirst";
+import ContactThird from "pages/LandingPages/landingpage/sections/ContactThird";
+import ContactFourth from "pages/LandingPages/landingpage/sections/ContactFourth";
+import ContentOne from "pages/LandingPages/landingpage/sections/TableContents";
+import TestimonialsTwo from "pages/LandingPages/landingpage/sections/Other";
 
 
 // Routes
@@ -51,57 +56,17 @@ import footerRoutes from "footer.routes";
 // Images
 import bgImage from "assets/images/bg-coworking4.jpg";
 
-// Firebase write
-import { collection, addDoc } from "firebase/firestore";
-import {db} from '../../../firebase';
 
-const initialList = [
-  {
-    id: 'a',
-    email: 'devrgerber@gmail.com',
-  },
-];
+
 
 function Landing() {
-  const [list, setList] = useState(initialList);
-  const [email, setName] = useState('');
-  const [show, setShow] = useState(false);
-  const [showing, setShowing] = useState(false);
-  const [showing1, setShowing1] = useState(false);
-  const [toggled, setToggled] = useState(true);
-  const toggleTerms = () => setToggled(!toggled)
-  const toggleSnackbar = () => setShow(!show);
-  const toggleError = () => setShowing(!showing);
-  const toggleError1 = () => setShowing1(!showing1);
-
-function handleChange(event) {
-  setName(event.target.value);
-}
-
-function handleAdd() {
-  if (!email || !email.includes("@")) {
-    toggleError()
-  }
-  else if (!toggled === true) {
-    toggleError1()
-  }
-
-  else {
-    const newList = list.concat({ email, id: uuidv4() });
-    addDoc(collection(db, "Email_List"), {
-      "Emails": email,
-      });
-    setList(newList);
-    setName('');
-    toggleSnackbar()
-  }
-}
+  
   const typedJSRef = useRef(null);
 
 // Setting up typedJS
 useEffect(() => {
   const typedJS = new Typed(typedJSRef.current, {
-    strings: ["content creator", "podcaster", "youtuber", "influencer", "writer"],
+    strings: ["Product Manager", "Designer", "Strategist", 'Leader'],
     typeSpeed: 50,
     backSpeed: 70,
     backDelay: 200,
@@ -113,20 +78,11 @@ useEffect(() => {
 }, []);
   return (
     <>
-      <DefaultNavbar
-        routes={routes}
-        action={{
-          route: "landing-page#contact-cta",
-          label: "Join Waitlist",
-          color: "primary",
-        }}
-
-      />
     <MKBox component="header" position="relative">
       <MKBox
         display="flex"
         alignItems="left"
-        minHeight="100vh"
+        minHeight="75vh"
         sx={{
           backgroundImage: `url(${bgImage})`,
           backgroundSize: "cover",
@@ -155,81 +111,16 @@ useEffect(() => {
                 },
               })}
             >
-              Our mission is to help the <spa ref={typedJSRef} />
+              <span ref={typedJSRef} />
               <br />
-              organically grow a following
+              
             </MKTypography>
             <MKTypography variant="body1" color="white" mt={0} mb={6} px={{ xs: 0, lg: 0 }}>
-            Join the waitlist now for access to the beta when released
+            Devon Gerber Portfolio
             </MKTypography>
             <br />
-            <Grid container spacing={2}>
-              <Grid item xs={6} sm={6} md={3}
-              alignItems="left"
-              textAlign="left"
-              mt={0}
-              >
-                <MKInput variant="outlined" type = "email" label="Insert Email" value = {email} onChange ={handleChange} InputLabelProps={{
-                  style : {color : 'white'} }} inputProps={{ style: { color: "white"} }} fullWidth />
-              </Grid>
-              <Grid item xs={12} sx={{ mb: 3, ml: -1 }}>
-                <Switch id="flexSwitchCheckDefault" defaultChecked onClick={toggleTerms} />
-                <MKTypography
-                  component="label"
-                  variant="button"
-                  color="white"
-                  fontWeight="regular"
-                  htmlFor="flexSwitchCheckDefault"
-                  sx={{ userSelect: "none", cursor: "pointer" }}
-                >
-                  I agree to the{" "}
-                  <MKTypography component="a" href="https://www.termsandcondiitionssample.com/live.php?token=i4SGGb38qsY0BoTVkuqPl4BrlkqKF6Ro" variant="button" fontWeight="regular" color="white">
-                    <u>Terms and Conditions</u>
-                  </MKTypography>
-
-                  .
-                </MKTypography>
-              </Grid>
-              <Grid item xs={12} sm={12}>
-                <MKButton variant="gradient" color="white" onClick={handleAdd} sx={{ height: "100%" }}>
-                  Join Waitlist
-                </MKButton>
-              </Grid>
-            </Grid>
+            
           </Grid>
-          <MKSnackbar
-          anchorOrigin={{ vertical: "top", horizontal: "center" }}
-          color="dark"
-          autoHideDuration={4000}
-          icon="notifications"
-          title="Thanks For The Support"
-          content="Thank you for joining the Nalapod waitlist. We will keep you updated on our progress and of course notify you when it's ready for you!!"
-          open={show}
-          close={toggleSnackbar}
-          onClose={toggleSnackbar}
-        />
-        <MKSnackbar
-        anchorOrigin={{ vertical: "top", horizontal: "center" }}
-        color="error"
-        icon="error"
-        autoHideDuration={4000}
-        title="Incorrect Input"
-        content="Please fill in with a valid email address. Thank you!"
-        open={showing}
-        close={toggleError}
-        onClose={toggleError}
-      />
-      <MKSnackbar
-      anchorOrigin={{ vertical: "top", horizontal: "center" }}
-      color="error"
-      icon="error"
-      autoHideDuration={4000}
-      title="Terms and Conditions"
-      content="Please accept the terms and conditions before submitting. Thank you!"
-      open={showing1}
-      close={toggleError1}
-      onClose={toggleError1}
-    />
         </Container>
       </MKBox>
     </MKBox>
@@ -239,47 +130,47 @@ useEffect(() => {
           mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
-          backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.8),
+          
+          backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.6),
           backdropFilter: "saturate(200%) blur(30px)",
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
         }}
       >
-        <AboutUs />
-        <Testimonials />
-        <Steps />
-        <br />
-        <Places />
+        < br />
+        < br />
+        < br />
+        < br />
+        <ContentOne/>
+        < br />
+        < br />
+        < br />
+        < br />
+        <ContactFirst/>
+        < br />
+        < br />
+        < br />
+        < br />
         <Contact />
-        <Container>
-          <MKBox
-            display="flex"
-            justifyContent="space-between"
-            alignItems="center"
-            borderRadius="xl"
-            my={24}
-            p={6}
-            sx={{
-              backgroundImage:
-                "url(https://images.unsplash.com/photo-1513346940221-6f673d962e97?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80)",
-                backgroundPosition: "bottom",
-            }}
-          >
-            <Grid container spacing={3} alignItems="center">
-              <Grid item xs={12} md={8} lg={5}>
-                <MKTypography variant="h5" color="white" fontWeight="bold">
-                  Join the content creator revolution. Let your business shine like it never has before.
-                </MKTypography>
-              </Grid>
-              <Grid item xs={12} lg={6} sx={{ ml: "auto" }}>
-                <MKBox width="12rem" ml="auto">
-                  <MKButton variant="gradient" color="warning" href="#contact-cta" fullWidth sx={{ boxShadow: "none" }}>
-                    start now
-                  </MKButton>
-                </MKBox>
-              </Grid>
-            </Grid>
-          </MKBox>
-        </Container>
+        < br />
+        < br />
+        < br />
+        < br />
+        <Contact1 />
+        < br />
+        < br />
+        < br />
+        < br />
+        <ContactThird />
+        < br />
+        < br />
+        < br />
+        < br />
+        <ContactFourth />
+        < br />
+        < br />
+        < br />
+        < br />
+        <TestimonialsTwo/>
       </Card>
       <MKBox pt={6} px={1} mt={6}>
         <DefaultFooter content={footerRoutes} />

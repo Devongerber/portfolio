@@ -473,21 +473,7 @@ function DefaultNavbar({ routes, transparent, light, action, sticky, relative, c
         })}
       >
         <MKBox display="flex" justifyContent="space-between" alignItems="center">
-        <Link to="/landing-page">
-          <MKBox
-            component="img"
-            to="/"
-            py={transparent ? 1.5 : 0.75}
-            pl={relative || transparent ? 0 : { xs: 0, lg: 1 }}
-            sx={{
-              width: 100,
-              maxWidth: { xs: 0, md: 150 },
-            }}
-            src={logo1}
-            alt="logo"
 
-          />
-          </Link>
 
           <MKBox
             color="inherit"
