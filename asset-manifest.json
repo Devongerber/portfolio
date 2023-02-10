@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.281265b7.chunk.js",
-    "main.js.map": "/portfolio/static/js/main.281265b7.chunk.js.map",
+    "main.js": "/portfolio/static/js/main.ef7eb158.chunk.js",
+    "main.js.map": "/portfolio/static/js/main.ef7eb158.chunk.js.map",
     "runtime-main.js": "/portfolio/static/js/runtime-main.56e99667.js",
     "runtime-main.js.map": "/portfolio/static/js/runtime-main.56e99667.js.map",
     "static/css/2.72330867.chunk.css": "/portfolio/static/css/2.72330867.chunk.css",
@@ -10,7 +10,7 @@
     "index.html": "/portfolio/index.html",
     "static/css/2.72330867.chunk.css.map": "/portfolio/static/css/2.72330867.chunk.css.map",
     "static/js/2.7d6ef560.chunk.js.LICENSE.txt": "/portfolio/static/js/2.7d6ef560.chunk.js.LICENSE.txt",
-    "static/media/back-1.7527a0e4.jpg": "/portfolio/static/media/back-1.7527a0e4.jpg",
+    "static/media/back-1.deb85af9.jpg": "/portfolio/static/media/back-1.deb85af9.jpg",
     "static/media/bg-coworking4.8a1a4f19.jpg": "/portfolio/static/media/bg-coworking4.8a1a4f19.jpg",
     "static/media/bg5.784b6fcb.jpg": "/portfolio/static/media/bg5.784b6fcb.jpg",
     "static/media/deck-1.a62c8c50.jpg": "/portfolio/static/media/deck-1.a62c8c50.jpg",
@@ -44,6 +44,6 @@
     "static/js/runtime-main.56e99667.js",
     "static/css/2.72330867.chunk.css",
     "static/js/2.7d6ef560.chunk.js",
-    "static/js/main.281265b7.chunk.js"
+    "static/js/main.ef7eb158.chunk.js"
   ]
 }
