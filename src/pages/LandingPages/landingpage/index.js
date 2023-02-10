@@ -55,6 +55,7 @@ import footerRoutes from "footer.routes";
 
 // Images
 import bgImage from "assets/images/bg-coworking4.jpg";
+import bgImage1 from "assets/images/back-1.jpg";
 
 
 
@@ -130,7 +131,7 @@ useEffect(() => {
           mx: { xs: 0, lg: 3 },
           mt: -8,
           mb: 4,
-          
+          backgroundImage: `url(${bgImage1})`,
           backgroundColor: ({ palette: { white }, functions: { rgba } }) => rgba(white.main, 0.6),
           backdropFilter: "saturate(200%) blur(30px)",
           boxShadow: ({ boxShadows: { xxl } }) => xxl,
